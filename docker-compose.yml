@@ -1,0 +1,7 @@
+version: "3"
+services:
+  tinygo-build:
+    image: tinygo/tinygo
+    volumes: 
+      - "./:/src"
+    command: tinygo build -o /src/flash.uf2 -size=short -target=trinket-m0 /src/main/
